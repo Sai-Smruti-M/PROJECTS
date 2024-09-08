@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<script src="jquery-3.3.1.min.js">
+</script>
+
+<script>
+
+
+    
+$(document).ready(function()
+{ 
+  $("#b1").click(function()
+   {
+    var x=Number($("#t1").val());
+    var y=Number($("#t2").val());
+    var op=$("#t3").val();
+    var result=0;
+    if(op=="+")
+    {
+        result=x+y;
+        console.log(result);
+    }
+    else if(op=="-")
+    {
+      result=x-y;
+    }
+    
+    else if(op=="*")
+    {
+      result=x*y;
+    }
+   else
+    {
+      result=x/y;
+    }
+    $("#t4").val(result);
+      
+   });
+});
+</script>
+</head>
+   
+    
+
+<body>
+
+X:<input id="t1" ><br>
+
+Y:<input id="t2"><br>
+OPERATOR:<input id="t3" ><br>
+
+RESULT:<input id="t4" ><br>
+<button id="b1">CALCULATE</button>
+
+
+
+</body>
+</html>
